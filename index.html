@@ -8,26 +8,36 @@
     <title>Chidi Ikebujo</title>
   </head>
   <body>
-    <div>
+    <!-- this is the main flex box -->
+    <div class="header">
+      <!-- this is a seperate flexbox -->
       <div class="logo">
-        <img src="images/1.svg" alt="logo" width="200px" />
+        <img src="images/1.svg" alt="logo" />
       </div>
-      <div class="home-button">Home</div>
-      <div class="about-me">About me</div>
-      <div class="portfolio-button">Portfolio</div>
+      <!-- this is a flexbox -->
+      <div class="menu">
+        <div class="home-button">Home</div>
+        <div class="about-me">About me</div>
+        <div class="portfolio-button">Portfolio</div>
 
-      <div class="github">GitHub fork</div>
-      <div class="linkedin">LinkedIn</div>
-      <div class="blog">Blog</div>
-      <div class="theme-button"><button>🌕</button></div>
+        <div class="github">GitHub fork</div>
+        <div class="linkedin">LinkedIn</div>
+        <div class="blog">Blog</div>
+        <div class="theme-button"><button>🌕</button></div>
+      </div>
     </div>
 
     <main>
-      <h1>Hi There! 👋🏼</h1>
-      <p>I'm Chidinma Ikebujo, B.ENG, MBET, CSPO</p>
-      <img src="images/chidi.jpg" alt="My photograph" />
-      <p>Product Manager and Developer</p>
-
+      <div class="image-section">
+        <div>
+          <h1>Hi There! 👋🏼</h1>
+          <p>I'm Chidinma Ikebujo, B.ENG, MBET, CSPO</p>
+          <p>Product Manager and Developer</p>
+        </div>
+        <div>
+          <img src="images/chidi.jpg" alt="My photograph" />
+        </div>
+      </div>
       <h2>About me</h2>
       <!-- add connect to this section -->
       <p>
@@ -58,6 +68,10 @@
         together!
       </p>
       <h3 class="project">My Projects</h3>
+      <div class="weather-app">Weather App</div>
+      <div class="world-clock">World Clock</div>
+      <div class="air-canada">Air Canada (Deloitte related)</div>
+      <div class="awardcloud">AwardCloud (Deloitte related)</div>
       <h3>Skills and Expertise</h3>
       <div class="tech-skills">
         Tech skills: HTML, CSS, JavaScript, Python, React, Bootstrap, Jira,
