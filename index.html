@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fustat:wght@200..800&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="src/style.css" />
     <title>Chidi Ikebujo</title>
   </head>
@@ -11,47 +17,71 @@
     <!-- this is the main flex box -->
     <div class="header">
       <!-- this is a seperate flexbox -->
-      <div class="logo">
-        <img src="images/1.svg" alt="logo" />
-      </div>
+      <div class="logo">Chidi.</div>
       <!-- this is a flexbox -->
       <div class="menu">
-        <div class="home-button">Home</div>
-        <div class="about-me">About me</div>
-        <div class="portfolio-button">Portfolio</div>
+        <div class="home-button"><a href="#home">Home</a></div>
+        <div class="about-me"><a href="#about-me">About me</a></div>
+        <div class="portfolio-button"><a href="#portfolio">Portfolio</a></div>
 
-        <div class="github">GitHub fork</div>
-        <div class="linkedin">LinkedIn</div>
-        <div class="blog">Blog</div>
-        <div class="theme-button"><button>🌕</button></div>
+        <div class="github">
+          <a href="https://github.com/Chidi-nma" target="_blank">GitHub</a>
+        </div>
+        <div class="linkedin">
+          <a href="https://www.linkedin.com/in/chidiikebujo/" target="_blank"
+            >LinkedIn</a
+          >
+        </div>
+
+        <div class="contact-me">
+          <button>
+            <a
+              href="mailto:nchidemchidi@gmail.com?subject=Hello%20Chidi!&body=I%20would%20like%20to%20get%20in%20touch%20with%20you."
+              class="get-in-touch-btn"
+              >Get in Touch</a
+            >
+          </button>
+        </div>
+        <!-- future feature -->
+        <!-- <div class="blog">Blog</div> -->
+        <!-- <div class="theme-button"><button>🌕</button></div> -->
       </div>
     </div>
 
     <main>
-      <div class="image-section">
+      <div id="home" class="image-section">
         <div>
-          <h1>Hi There! 👋🏼</h1>
-          <p>I'm Chidinma Ikebujo, B.ENG, MBET, CSPO</p>
-          <p>Product Manager and Developer</p>
+          <h1>Hi There! <span class="waving-hand">👋🏼</span></h1>
+          <p class="my-name">
+            I'm <span class="name">Chidinma Ikebujo</span>, B.ENG, MBET, CSPO
+          </p>
+          <p class="my-name">Product Manager and Developer</p>
         </div>
         <div>
           <img src="images/chidi.jpg" alt="My photograph" />
         </div>
       </div>
-      <h2>About me</h2>
+      <h2 id="about-me">About me</h2>
       <!-- add connect to this section -->
       <p>
-        My name is Chidinma Uchechi Ikebujo, but call me Chidi. I'm a passionate
+        My name is Chidinma Ikebujo, but call me Chidi. I'm a passionate
         problem-solver with a knack for turning challenges into impactful
-        solutions. With over four years at <a href="#">Deloitte</a>, I honed my
-        skills in building and delivering products that address complex client
-        needs. My approach is rooted in empathy and developing a close yet
-        professional relationships with my clients to deeply understand their
-        pain points. This allows me to craft detailed requirements, user
-        stories, and clear specifications that drive results. <br />I bring a
-        unique blend of expertise in business, entrepreneurship, and technology
-        consulting, supported by a
-        <a href="#"
+        solutions. With over four years at
+        <a
+          href="https://www2.deloitte.com/ca/en/pages/public-sector/articles/reimagining-financial-aid-for-post-secondary-and-government-with-awardcloud.html"
+          target="_blank"
+          >Deloitte</a
+        >, I honed my skills in building and delivering products that address
+        complex client needs. My approach is rooted in empathy and developing a
+        close yet professional relationships with my clients to deeply
+        understand their pain points. This allows me to craft detailed
+        requirements, user stories, and clear specifications that drive results.
+        <br />
+        <br />I bring a unique blend of expertise in business, entrepreneurship,
+        and technology consulting, supported by a
+        <a
+          href="https://uwaterloo.ca/conrad-school-entrepreneurship-business/graduate-students"
+          target="_blank"
           >Master’s degree in Business, Entrepreneurship, and Technology from
           the University of Waterloo</a
         >. My background enables me to bridge the gap between stakeholders and
@@ -60,42 +90,115 @@
       <p>
         Beyond product management, development, and delivery, I thrive on
         creativity, joy and curiosity. Whether it’s shaping
-        <a href="#">clay in pottery</a>, losing myself in a good comedy or
-        Japanese anime, or dancing to my favorite tunes, I’m always exploring
-        new ways to bring joy and perspective into my life. I’m excited about
-        opportunities to collaborate with innovative teams and tackle
-        challenging problems. <br />Let’s create something extraordinary
-        together!
+        <a
+          href="https://www.shecodes.io/cohorts/2281/projects/2491248"
+          target="_blank"
+          >clay in pottery</a
+        >, losing myself in a good comedy or Japanese anime, or dancing to my
+        favorite tunes, I’m always exploring new ways to bring joy and
+        perspective into my life. I’m excited about opportunities to collaborate
+        with innovative teams and tackle challenging problems. <br />Let’s
+        create something extraordinary together!
       </p>
-      <h3 class="project">My Projects</h3>
-      <div class="weather-app">Weather App</div>
-      <div class="world-clock">World Clock</div>
-      <div class="air-canada">Air Canada (Deloitte related)</div>
-      <div class="awardcloud">AwardCloud (Deloitte related)</div>
-      <h3>Skills and Expertise</h3>
-      <div class="tech-skills">
-        Tech skills: HTML, CSS, JavaScript, Python, React, Bootstrap, Jira,
-        Confluence, APIs
-      </div>
-      <div class="soft-skills">
-        Agile Software Product Management, Roadmapping, Problem solving, Market
-        Research and Analysis, Prioritization, UX/UI, Product Testing.
+      <!-- Future feature - Testimonials, what people i've worked with say about me -->
+      <h3 id="portfolio">Projects</h3>
+      <div class="grid-container">
+        <a
+          href="https://www.aircanada.com/ca/en/aco/home/aeroplan.html#/"
+          class="project-card"
+          target="_blank"
+        >
+          <img src="images/air-canada.jpeg" alt="Air Canada Project" />
+          <h4>Aeroplan (Air Canada)</h4>
+        </a>
+        <a
+          href="https://www2.deloitte.com/ca/en/pages/public-sector/articles/reimagining-financial-aid-for-post-secondary-and-government-with-awardcloud.html"
+          class="project-card"
+          target="_blank"
+        >
+          <img src="images/awardcloud.jpeg" alt="AwardCloud Project" />
+          <h4>AwardCloud (Deloitte)</h4>
+        </a>
+        <a
+          href="https://chidis-weather-app.netlify.app/"
+          target="_blank"
+          class="project-card"
+        >
+          <img src="images/weather-app.png" alt="Weather App" />
+          <h4>Weather App</h4>
+        </a>
+        <a
+          href="https://chidis-world-clock.netlify.app/"
+          class="project-card"
+          target="_blank"
+        >
+          <img src="images/world-clock.jpeg" alt="World Clock" />
+          <h4>World Clock</h4>
+        </a>
       </div>
 
-      <h4>Let's Connect</h4>
-      <button class="contact-me">Contact me</button>
-      <div class="linkedin-icon">In</div>
-      <div class="github-icon">Github</div>
-      <div class="twitter">X</div>
+      <h3>Skills and Expertise</h3>
+      <div class="skills-section">
+        <div class="skill-card">
+          <h4>Technical Skills</h4>
+          <div class="skill-icons">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Python</span>
+            <span>React.js</span>
+            <span>Bootstrap</span>
+            <span>APIs</span>
+            <span>SEO</span>
+            <span>Responsive</span>
+            <span>Version Control (Git/GitHub)</span>
+            <span>Hosting</span>
+            <span>VS Code</span>
+            <span>AI</span>
+            <span>UX/UI</span>
+            <span>Jira/Confluence</span>
+            <span>Product Testing</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h4>Business & Soft Skills</h4>
+          <div class="skill-icons">
+            <span>Product Management</span>
+            <span>Business Strategy Development</span>
+            <span>Competitor Analysis</span>
+            <span>Roadmapping</span>
+            <span>Customer Journey Mapping</span>
+            <span>Market Research</span>
+            <span>Stakeholder Management</span>
+            <span>Pricing Strategies </span>
+            <span>Leadership and Team Management</span>
+            <span>Empathy and User-Centered Thinking</span>
+            <span>Prioritization</span>
+          </div>
+        </div>
+      </div>
     </main>
 
+    <!-- FOOTER -->
+
     <footer>
-      <div>
-        Designed and developed by Chidinma Ikebujo and it open-sourced on Github
+      <div class="footer-container">
+        <p>© 2025 Chidi Ikebujo. All rights reserved.</p>
+        <p>
+          Designed and developed by
+          <a href="https://github.com/Chidi-nma" target="_blank"
+            >Chidi Ikebujo</a
+          >
+        </p>
+        <p>
+          Open-sourced on
+          <a
+            href="https://github.com/Chidi-nma/my-portfolio-website"
+            target="_blank"
+            >GitHub</a
+          >
+        </p>
       </div>
-      <div>Copyright 2025 Chidi Ikebujo</div>
-      <button>Buy me Coffee</button>
-      <button>Chat bot</button>
     </footer>
 
     <script src="src/index.js"></script>

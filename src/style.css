@@ -1,34 +1,108 @@
-body {
-  background: #22313f;
-  color: white;
+/* General Styling */
+html {
+  scroll-behavior: smooth;
 }
 
+body {
+  background: #f5f4ef;
+  color: #333;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Header Section */
 .header {
   display: flex;
   justify-content: space-between;
-  background: #e4f1fe;
-  color: #22313f;
+  align-items: center;
+  padding: 20px 40px;
+  background: #202020;
+  color: #fff;
+  position: sticky; /* Makes header stick to the top */
+  top: 0;
+  z-index: 1000; /*places it in front of all the elements on the page*/
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* This removes underline and set color for header links */
+.header .menu a {
+  text-decoration: none; /* Removes the underline */
+  color: inherit; /* Inherits the color from the parent (the menu div) */
+  font-weight: bold; /* makes the links bold */
+}
+
+.header .menu a:hover {
+  color: #f0a500; /* Optional: Add a hover effect for better UX */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .menu {
   display: flex;
-  justify-content: space-between;
-  width: 50%;
-  padding: 30px;
-}
-.logo {
-  margin: -20px;
+  gap: 20px; /* Creates equal spacing between menu items */
 }
 
-.logo img {
-  width: 250px;
-  height: 120px;
+.menu div {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
+.menu div:hover {
+  color: #d3cbc0;
+  text-decoration: underline;
+}
+
+.contact-me {
+  font-size: 16px;
+}
+.contact-me button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  color: white;
+  background-color: #0077ff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-me button:hover {
+  background-color: #005bb5;
+  transform: scale(1.05);
+}
+
+.header .menu {
+  display: flex;
+  align-items: center; /* Ensures vertical alignment */
+  gap: 20px; /* Equal spacing between items */
+}
+
+.contact-me {
+  margin-left: auto; /* Pushes button to the end of the menu */
+}
+
+/* Image Section */
 .image-section {
   display: flex;
   justify-content: space-around;
-  padding: 60px;
+  align-items: center;
+  padding: 60px 20px;
+  flex-wrap: wrap; /* Allows items to stack on smaller screens */
+  gap: 20px; /* Spacing between items */
+}
+
+.image-section div {
+  text-align: center;
+  margin-bottom: -30px;
 }
 
 .image-section img {
@@ -36,4 +110,253 @@ body {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
     rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
     rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-section img:hover {
+  transform: scale(1.05); /* Subtle zoom effect on hover */
+}
+
+/* Waving Hand styling*/
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.waving-hand {
+  display: inline-block;
+  animation: wave 1.5s infinite ease-in-out;
+  transform-origin: 70% 70%; /* Adjusts the pivot point for the rotation */
+  font-size: 4rem; /* Optional: Adjust size for better visibility */
+}
+
+.name {
+  color: #a87449;
+  font-weight: bold;
+}
+.my-name {
+  font-size: 20px;
+}
+
+/* Main Content */
+main {
+  padding: 20px 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Libre Baskerville", serif;
+  margin-bottom: 20px;
+  margin-top: 120px;
+}
+
+h1 {
+  font-size: 4rem;
+  color: #202020;
+}
+
+h2,
+h3,
+h4 {
+  color: #444;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+/* Projects Section */
+.project {
+  color: #202020;
+}
+
+/* Grid container for projects */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  margin: 20px 0;
+  padding: 40px;
+}
+
+/* Project cards */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Match text color to the theme */
+  background: linear-gradient(
+    145deg,
+    #ffffff,
+    #f0f0f0
+  ); /* Subtle gradient background */
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1), 0px 2px 6px rgba(0, 0, 0, 0.05);
+  overflow: hidden; /* Ensure content stays inside the card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  padding: 10px; /* Inner spacing */
+}
+
+/* Card hover effect */
+.project-card:hover {
+  transform: translateY(-10px); /* prominent hover motion */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2), 0px 3px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
+}
+
+/* Images in cards */
+.project-card img {
+  width: 90%; /* Slightly smaller width to fit nicely inside the card */
+  height: 200px; /* Fixed height for images */
+  object-fit: cover; /* Keep image proportions */
+  border-radius: 12px; /* Rounded edges for images */
+  margin-bottom: 15px; /* Space between image and title */
+  transition: transform 0.3s ease; /* Smooth hover effect for image */
+}
+
+/* Image hover effect */
+.project-card:hover img {
+  transform: scale(1.05); /* Slight zoom-in effect */
+}
+
+/* Card titles */
+.project-card h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #333; /* Darker text color for better readability */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+  }
+}
+
+/* Skills Section Container */
+.skills-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background: linear-gradient(145deg, #ffffff, #f6f6f6);
+  border-radius: 15px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+/* Individual Skill Cards */
+.skill-card {
+  background: linear-gradient(145deg, #f8f8f8, #eaeaea);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect on Skill Cards */
+.skill-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Skill Card Titles */
+.skill-card h4 {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 20px;
+}
+
+/* Skill Icons Container */
+.skill-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Individual Skill Badge */
+.skill-icons span {
+  font-size: 0.9rem;
+  background: #ffffff;
+  padding: 8px 15px;
+  border-radius: 20px;
+  color: #555;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect on Skill Badge */
+.skill-icons span:hover {
+  background: #0077ff;
+  color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-section {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-card {
+    padding: 15px;
+  }
+
+  .skill-card h4 {
+    font-size: 1.3rem;
+  }
+
+  .skill-icons span {
+    font-size: 0.85rem;
+  }
+}
+
+/* Footer container */
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+footer a {
+  color: #bbb;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #fff;
 }
