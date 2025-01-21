@@ -228,6 +228,7 @@ p {
 }
 .about-me {
   text-align: justify;
+  text-justify: inter-word;
 }
 
 /* Testimonials Section */
