@@ -1,8 +1,7 @@
 /* General Styling */
-/* html {
+html {
   scroll-behavior: smooth;
-} */
-
+}
 body {
   background: #f5f4ef;
   color: #333;
@@ -20,22 +19,22 @@ body {
   padding: 20px 40px;
   background: #202020;
   color: #fff;
-  position: sticky; /* Makes header stick to the top */
+  position: sticky;
   top: 0;
-  z-index: 1000; /*places it in front of all the elements on the page*/
+  z-index: 1000;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* This removes underline and set color for header links */
 .header .menu a {
-  text-decoration: none; /* Removes the underline */
-  color: inherit; /* Inherits the color from the parent (the menu div) */
-  font-weight: bold; /* makes the links bold */
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
 }
 
 .header .menu a:hover {
-  color: #f0a500; /* Optional: Add a hover effect for better UX */
-  transition: color 0.3s ease; /* Smooth color transition */
+  color: #f0a500;
+  transition: color 0.3s ease;
 }
 
 .logo {
@@ -47,8 +46,8 @@ body {
 }
 
 .menu {
-  display: flex;
-  gap: 20px; /* Creates equal spacing between menu items */
+  display: none;
+  gap: 20px;
 }
 
 .menu div {
@@ -63,7 +62,9 @@ body {
 
 .contact-me {
   font-size: 16px;
+  margin-left: auto;
 }
+
 .contact-me button {
   font-size: 1rem;
   padding: 10px 20px;
@@ -86,8 +87,47 @@ body {
   gap: 20px; /* Equal spacing between items */
 }
 
-.contact-me {
-  margin-left: auto; /* Pushes button to the end of the menu */
+.hamburger-menu {
+  display: none; /* Hide the hamburger by default */
+  cursor: pointer;
+  font-size: 2rem;
+  color: white;
+}
+
+/* Mobile Menu */
+.menu.mobile {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  background: #202020;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  padding: 20px 0;
+}
+
+.menu.mobile a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu.mobile a:hover {
+  color: #f0a500;
+}
+
+/* Show mobile menu when hamburger is clicked */
+.menu.mobile.active {
+  display: flex; /* Show the mobile menu when 'active' class is added */
+}
+
+#mobile-menu {
+  display: none;
+}
+
+#mobile-menu.active {
+  display: block; /* or any other display property you want */
 }
 
 /* Image Section */
@@ -96,8 +136,8 @@ body {
   justify-content: space-around;
   align-items: center;
   padding: 60px 20px;
-  flex-wrap: wrap; /* Allows items to stack on smaller screens */
-  gap: 20px; /* Spacing between items */
+  flex-wrap: wrap;
+  gap: 60px;
 }
 
 .image-section div {
@@ -144,7 +184,7 @@ body {
   display: inline-block;
   animation: wave 1.5s infinite ease-in-out;
   transform-origin: 70% 70%; /* Adjusts the pivot point for the rotation */
-  font-size: 4rem; /* Optional: Adjust size for better visibility */
+  font-size: 4rem; /*  Adjust size for better visibility */
 }
 
 .name {
@@ -168,7 +208,7 @@ h3,
 h4 {
   font-family: "Libre Baskerville", serif;
   margin-bottom: 20px;
-  margin-top: 120px;
+  margin-top: 100px;
 }
 
 h1 {
@@ -185,6 +225,9 @@ h4 {
 
 p {
   margin-bottom: 15px;
+}
+.about-me {
+  text-align: justify;
 }
 
 /* Testimonials Section */
@@ -243,7 +286,6 @@ p {
   color: #777;
   margin-top: 10px;
 }
-
 @media (max-width: 768px) {
   .testimonial {
     flex-basis: 100%;
@@ -424,4 +466,91 @@ footer a:hover {
   color: #fff;
 }
 
-/* Testimonials */
+#mobile-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#mobile-menu ul li {
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}
+
+/* Optional: Adding styles for when the menu is collapsed */
+#mobile-menu ul li {
+  display: none; /* Hide the menu items by default */
+}
+
+#mobile-menu.active ul li {
+  display: block; /* Show the menu items when the menu is active */
+}
+
+@media (max-width: 768px) {
+  .header .menu {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block; /* Show hamburger on mobile */
+  }
+
+  /* Mobile Menu styling */
+  .menu.mobile.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    background: #202020;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    padding: 20px 0;
+  }
+}
+
+/* testing */
+
+@media (max-width: 768px) {
+  /* .header {
+    flex-direction: column;
+    padding: 20px;
+  } */
+  h1 {
+    margin-top: 10px;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+  /* Hide the regular menu on mobile */
+  /* .menu {
+    display: none;
+  } */
+
+  /* Show hamburger menu on mobile */
+  /* .hamburger-menu {
+    display: block; 
+  } */
+
+  /* Show mobile menu when triggered */
+  /* .menu.mobile {
+    display: none;
+  } */
+
+  .image-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-section img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .contact-me button {
+    width: 50%; /* Make the button full-width on mobile */
+  }
+}

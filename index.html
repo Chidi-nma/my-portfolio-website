@@ -21,7 +21,11 @@
       <!-- this is a seperate flexbox -->
       <div class="logo">Chidi.</div>
       <!-- this is a flexbox -->
-      <div class="menu">
+
+      <!-- Hamburger Icon -->
+      <div class="hamburger-menu" id="hamburger-menu">☰</div>
+
+      <div id="main-menu" class="menu">
         <div class="home-button"><a href="#home">Home</a></div>
         <div class="about-me"><a href="#about-me">About me</a></div>
         <div class="portfolio-button"><a href="#portfolio">Portfolio</a></div>
@@ -48,6 +52,33 @@
         <!-- <div class="blog">Blog</div> -->
         <!-- <div class="theme-button"><button>🌕</button></div> -->
       </div>
+      <!-- mobile div -->
+      <div id="mobile-menu" class="menu mobile">
+        <ul>
+          <li class="home-button"><a href="#home">Home</a></li>
+          <li class="about-me"><a href="#about-me">About me</a></li>
+          <li class="portfolio-button"><a href="#portfolio">Portfolio</a></li>
+
+          <li class="github">
+            <a href="https://github.com/Chidi-nma" target="_blank">GitHub</a>
+          </li>
+          <li class="linkedin">
+            <a href="https://www.linkedin.com/in/chidiikebujo/" target="_blank"
+              >LinkedIn</a
+            >
+          </li>
+
+          <li class="contact-me">
+            <button>
+              <a
+                href="mailto:nchidemchidi@gmail.com?subject=Hello%20Chidi!&body=I%20would%20like%20to%20get%20in%20touch%20with%20you."
+                class="get-in-touch-btn"
+                >Get in Touch</a
+              >
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <main>
@@ -64,7 +95,7 @@
         </div>
       </div>
       <h2 id="about-me">About me</h2>
-      <p>
+      <p class="about-me">
         My name is Chidinma Ikebujo, but call me Chidi. I'm a passionate
         problem-solver with a knack for turning challenges into impactful
         solutions. With over four years at
@@ -237,7 +268,7 @@
             <span>APIs</span>
             <span>AJAX</span>
             <span>SEO</span>
-            <!-- <span>Responsive</span> -->
+            <span>Responsive</span>
             <span>Version Control (Git/GitHub)</span>
             <span>Hosting</span>
             <span>VS Code</span>
