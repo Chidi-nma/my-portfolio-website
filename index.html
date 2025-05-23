@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -84,7 +84,10 @@
     <main>
       <div id="home" class="image-section">
         <div>
-          <h1>Hi There! <span class="waving-hand">👋🏼</span></h1>
+          <h1>
+            Hi There!
+            <span class="waving-hand">👋🏼</span>
+          </h1>
           <p class="my-name">
             I'm <span class="name">Chidinma Ikebujo</span>, B.ENG, MBET, CSPO
           </p>
@@ -324,6 +327,28 @@
           >
         </p>
       </div>
+
+      <!-- Calendly badge widget begin -->
+      <link
+        href="https://assets.calendly.com/assets/external/widget.css"
+        rel="stylesheet"
+      />
+      <script
+        src="https://assets.calendly.com/assets/external/widget.js"
+        type="text/javascript"
+        async
+      ></script>
+      <script type="text/javascript">
+        window.onload = function () {
+          Calendly.initBadgeWidget({
+            url: "https://calendly.com/ikebujochidi/30min",
+            text: "Schedule time with me",
+            color: "#0069ff",
+            textColor: "#ffffff",
+          });
+        };
+      </script>
+      <!-- Calendly badge widget end -->
     </footer>
 
     <script src="src/index.js"></script>

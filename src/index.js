@@ -1,3 +1,11 @@
+//Typewriter for Hi There!
+// new Typewriter("#typewriter", {
+//   strings: "Hi There!",
+//   autoStart: true,
+//   cursor: "",
+//   delay: 100,
+// });
+
 // Get references to elements
 const hamburgerMenu = document.getElementById("hamburger-menu");
 const mobileMenu = document.getElementById("mobile-menu");
